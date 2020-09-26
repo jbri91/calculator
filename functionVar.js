@@ -42,3 +42,6 @@ function del() {
   return (displayElement.innerText = removeNumber);
 }
 
+function equals() {
+  //Evaluate expression and submit to display.
+}
