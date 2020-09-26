@@ -1,40 +1,49 @@
 displayElement = document.getElementById('display');
 
+const one = parseInt(1);
+const two = parseInt(2);
+const three = parseInt(3);
+const four = parseInt(4);
+const five = parseInt(5);
+const six = parseInt(6);
+const seven = parseInt(7);
+const eight = parseInt(8);
+const nine = parseInt(9);
+const zero = parseInt(0);
+
 document.getElementById("one").addEventListener("click", function (e) {
-    type = displayElement.innerText += 1;
-    Number(type);
-    console.log(typeof type);
+    parseInt(displayElement.innerText += one);
   });
 document.getElementById("two").addEventListener("click", function (e) {
-  displayElement.innerText += 2;
+  parseInt(displayElement.innerText += two);
 });
 document.getElementById("three").addEventListener("click", function (e) {
-  displayElement.innerText += 3;
+  parseInt(displayElement.innerText += three);
+  console.log(typeof three);
 });
 document.getElementById("four").addEventListener("click", function (e) {
-  displayElement.innerText += 4;
+  parseInt(displayElement.innerText += four);
 });
 document.getElementById("five").addEventListener("click", function (e) {
-  displayElement.innerText += 5;
+  parseInt(displayElement.innerText += five);
 });
 document.getElementById("six").addEventListener("click", function (e) {
-  displayElement.innerText += 6;
+  parseInt(displayElement.innerText += six);
 });
 document.getElementById("seven").addEventListener("click", function (e) {
-  displayElement.innerText += 7;
+  parseInt(displayElement.innerText += seven);
 });
 document.getElementById("eight").addEventListener("click", function (e) {
-  displayElement.innerText += 8;
+  parseInt(displayElement.innerText += eight);
 });
 document.getElementById("nine").addEventListener("click", function (e) {
-  displayElement.innerText += 9;
+  parseInt(displayElement.innerText += nine);
 });
 document.getElementById("zero").addEventListener("click", function (e) {
-  displayElement.innerText += 0;
+  parseInt(displayElement.innerText += zero);
 });
 document.getElementById("addition").addEventListener("click", function (e) {
-  displayElement.innerText += "+";
-  return num1 + num2;
+    displayElement.innerText += "+";
 });
 document.getElementById("subtract").addEventListener("click", function (e) {
   displayElement.innerText += "-";
@@ -54,19 +63,21 @@ document.getElementById("divide").addEventListener("click", function (e) {
 document.getElementById("del").addEventListener("click", function (e) {
   display = displayElement;
   if (display == " ") {
-    alert("Enter A Number");
+    alert("Enter A parseInt");
   } else {
     del();
   }
 });
 document.getElementById("all-clear").addEventListener("click", function (e) {
-  console.log("AC");
   allClear();
 });
 
 displayElement.innerHTML = "";
 
-function addition(num1, num2) {
+
+function addition(x, y) {
+    num1 = parseInt(x);
+    num2 = parseInt(y);
   addition = num1 + num2;
   return (displayElement.innerHTML = addition);
 }
@@ -91,6 +102,6 @@ function allClear() {
 }
 
 function del() {
-  removeNumber = displayElement.innerText.slice(0, -1);
-  return (displayElement.innerText = removeNumber);
+  removeparseInt = displayElement.innerText.slice(0, -1);
+  return (displayElement.innerText = removeparseInt);
 }
