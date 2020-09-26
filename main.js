@@ -15,32 +15,32 @@ document.getElementById("one").addEventListener("click", function (e) {
     parseInt(displayElement.innerText += one);
   });
 document.getElementById("two").addEventListener("click", function (e) {
-  parseInt(displayElement.innerText += two);
+    parseInt(displayElement.innerText += two);
 });
 document.getElementById("three").addEventListener("click", function (e) {
-  parseInt(displayElement.innerText += three);
+    parseInt(displayElement.innerText += three);
   console.log(typeof three);
 });
 document.getElementById("four").addEventListener("click", function (e) {
-  parseInt(displayElement.innerText += four);
+    parseInt(displayElement.innerText += four);
 });
 document.getElementById("five").addEventListener("click", function (e) {
-  parseInt(displayElement.innerText += five);
+    parseInt(displayElement.innerText += five);
 });
 document.getElementById("six").addEventListener("click", function (e) {
-  parseInt(displayElement.innerText += six);
+    parseInt(displayElement.innerText += six);
 });
 document.getElementById("seven").addEventListener("click", function (e) {
-  parseInt(displayElement.innerText += seven);
+    parseInt(displayElement.innerText += seven);
 });
 document.getElementById("eight").addEventListener("click", function (e) {
-  parseInt(displayElement.innerText += eight);
+    parseInt(displayElement.innerText += eight);
 });
 document.getElementById("nine").addEventListener("click", function (e) {
-  parseInt(displayElement.innerText += nine);
+    parseInt(displayElement.innerText += nine);
 });
 document.getElementById("zero").addEventListener("click", function (e) {
-  parseInt(displayElement.innerText += zero);
+    parseInt(displayElement.innerText += zero);
 });
 document.getElementById("addition").addEventListener("click", function (e) {
     displayElement.innerText += "+";
@@ -55,7 +55,10 @@ document.getElementById("point").addEventListener("click", function (e) {
   displayElement.innerText += ".";
 });
 document.getElementById("equal").addEventListener("click", function (e) {
-  displayElement.innerText = "=";
+    if (document.getElementById('display').innerText.includes('+')) {
+addition();
+    }
+    displayElement.innerText = "=";
 });
 document.getElementById("divide").addEventListener("click", function (e) {
   displayElement.innerText += "/";
