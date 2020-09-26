@@ -1,49 +1,50 @@
-displayElement = document.getElementById('display');
+let displayElement = document.getElementById("display");
 
-const one = parseInt(1);
-const two = parseInt(2);
-const three = parseInt(3);
-const four = parseInt(4);
-const five = parseInt(5);
-const six = parseInt(6);
-const seven = parseInt(7);
-const eight = parseInt(8);
-const nine = parseInt(9);
-const zero = parseInt(0);
+const one = Number(1);
+const two = Number(2);
+const three = Number(3);
+const four = Number(4);
+const five = Number(5);
+const six = Number(6);
+const seven = Number(7);
+const eight = Number(8);
+const nine = Number(9);
+const zero = Number(0);
 
 document.getElementById("one").addEventListener("click", function (e) {
-    parseInt(displayElement.innerText += one);
-  });
+  one1 = Number((displayElement.innerText += one));
+  console.log(typeof one1);
+});
 document.getElementById("two").addEventListener("click", function (e) {
-    parseInt(displayElement.innerText += two);
+  Number((displayElement.innerText += two));
 });
 document.getElementById("three").addEventListener("click", function (e) {
-    parseInt(displayElement.innerText += three);
+  Number((displayElement.innerText += three));
   console.log(typeof three);
 });
 document.getElementById("four").addEventListener("click", function (e) {
-    parseInt(displayElement.innerText += four);
+  Number((displayElement.innerText += four));
 });
 document.getElementById("five").addEventListener("click", function (e) {
-    parseInt(displayElement.innerText += five);
+  Number((displayElement.innerText += five));
 });
 document.getElementById("six").addEventListener("click", function (e) {
-    parseInt(displayElement.innerText += six);
+  Number((displayElement.innerText += six));
 });
 document.getElementById("seven").addEventListener("click", function (e) {
-    parseInt(displayElement.innerText += seven);
+  Number((displayElement.innerText += seven));
 });
 document.getElementById("eight").addEventListener("click", function (e) {
-    parseInt(displayElement.innerText += eight);
+  Number((displayElement.innerText += eight));
 });
 document.getElementById("nine").addEventListener("click", function (e) {
-    parseInt(displayElement.innerText += nine);
+  Number((displayElement.innerText += nine));
 });
 document.getElementById("zero").addEventListener("click", function (e) {
-    parseInt(displayElement.innerText += zero);
+  Number((displayElement.innerText += zero));
 });
 document.getElementById("addition").addEventListener("click", function (e) {
-    displayElement.innerText += "+";
+  displayElement.innerText += "+";
 });
 document.getElementById("subtract").addEventListener("click", function (e) {
   displayElement.innerText += "-";
@@ -55,32 +56,21 @@ document.getElementById("point").addEventListener("click", function (e) {
   displayElement.innerText += ".";
 });
 document.getElementById("equal").addEventListener("click", function (e) {
-    if (document.getElementById('display').innerText.includes('+')) {
-addition();
-    }
-    displayElement.innerText = "=";
+  displayElement.innerText += "=";
 });
 document.getElementById("divide").addEventListener("click", function (e) {
   displayElement.innerText += "/";
 });
 document.getElementById("del").addEventListener("click", function (e) {
-  display = displayElement;
-  if (display == " ") {
-    alert("Enter A parseInt");
-  } else {
-    del();
-  }
+  del();
 });
 document.getElementById("all-clear").addEventListener("click", function (e) {
   allClear();
 });
 
-displayElement.innerHTML = "";
-
-
 function addition(x, y) {
-    num1 = parseInt(x);
-    num2 = parseInt(y);
+  num1 = Number(x);
+  num2 = Number(y);
   addition = num1 + num2;
   return (displayElement.innerHTML = addition);
 }
@@ -105,6 +95,11 @@ function allClear() {
 }
 
 function del() {
-  removeparseInt = displayElement.innerText.slice(0, -1);
-  return (displayElement.innerText = removeparseInt);
+  removeNumber = displayElement.innerText.slice(0, -1);
+  return (displayElement.innerText = removeNumber);
+}
+
+function evaluateString() {
+    let numInput = document.getElementById('display').innerText;
+    eval(numInput);
 }
