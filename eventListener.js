@@ -6,7 +6,6 @@ document.getElementById("one").addEventListener("click", function (e) {
   });
   document.getElementById("three").addEventListener("click", function (e) {
     Number((displayElement.innerText += three));
-    console.log(typeof three);
   });
   document.getElementById("four").addEventListener("click", function (e) {
     Number((displayElement.innerText += four));
@@ -30,7 +29,15 @@ document.getElementById("one").addEventListener("click", function (e) {
     Number((displayElement.innerText += zero));
   });
   document.getElementById("addition").addEventListener("click", function (e) {
-    displayElement.innerText += "+";
+    addition(); 
+    // operator1 = displayElement.innerText.substr(0);
+    // console.log(operator1)
+    // displayElement.innerText = " ";
+    // operator2 = displayElement.innerText.substr(0);
+    // console.log(operator2);
+    // displayElement.innerText = operator1 + operator2;
+
+// displayElement.innerText += "+";
   });
   document.getElementById("subtract").addEventListener("click", function (e) {
     displayElement.innerText += "-";
