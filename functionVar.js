@@ -13,9 +13,9 @@
 // EXPECTATION: Show 3 in the display
 // ACTUAL: ???
 
-let operator1 = 0;
-let operator2 = 0;
-let operatorSymbol = 0;
+let firstNumber = null;
+let secondNumber = null;
+let operator = null;
 
 
 let displayElement = document.getElementById("display");
@@ -31,11 +31,27 @@ const eight = Number(8);
 const nine = Number(9);
 const zero = Number(0);
 
-function addition(operator1) {
-  operator1 = Number(displayElement.innerText.substr(0));
-  console.log(operator1)
-  displayElement.innerText = " ";
-  return operator1
+
+function getFirstNumber(number) {
+  firstNumber = Number(displayElement.innerText.substr(0));
+firstNumber === null ? firstNumber = number : firstNumber += number;
+return firstNumber;
+}
+
+function getSecondNumber(number) {
+  SecondNumber = Number(displayElement.innerText.substr(0));
+secondNumber === null ? secondNumber = number : secondNumber += number;
+return secondNumber;
+}
+
+console.log(firstNumber);
+
+function addition(number) {
+  getFirstNumber(number);
+  firstNumber = displayElement.innerHTML;
+  if (operator == null && displayElement.innerHTML >= 0 ) {
+getSecondNumber();
+  }
 }
 
 
