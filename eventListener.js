@@ -49,7 +49,8 @@ document.getElementById("one").addEventListener("click", function (e) {
     displayElement.innerText += ".";
   });
   document.getElementById("equal").addEventListener("click", function (e) {
-    displayElement.innerText += "=";
+    // displayElement.innerText += "=";
+    equals();
   });
   document.getElementById("divide").addEventListener("click", function (e) {
     displayElement.innerText += "/";

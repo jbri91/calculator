@@ -31,13 +31,11 @@ const eight = Number(8);
 const nine = Number(9);
 const zero = Number(0);
 
-function addition(operator1, operator2) {
-  operator1 = displayElement.innerText.substr(0);
+function addition(operator1) {
+  operator1 = Number(displayElement.innerText.substr(0));
   console.log(operator1)
   displayElement.innerText = " ";
-  operator2 = displayElement.innerText.substr(0);
-  console.log(operator2);
-  return addition
+  return operator1
 }
 
 
@@ -65,7 +63,14 @@ function del() {
   return (displayElement.innerText = removeNumber);
 }
 
-function equals() {
+function equals(operator1, operator2) {
+  operator2 = Number(displayElement.innerText.substr(0));
+  sum = Number(operator1) + Number(operator2)
+  console.log(operator1);
+  console.log(operator2);
+  console.log(sum);
+  displayElement.innerText = sum;
+return sum;
   //Evaluate expression and submit to display. 
 }
 
