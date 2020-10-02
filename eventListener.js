@@ -1,49 +1,100 @@
 document.getElementById("one").addEventListener("click", function (e) {
-    one1 = Number((displayElement.innerText += one));
+    Number((displayElement.innerText += one));
+
+    if (firstNumber == null) {
+      getFirstNumber(one);
+    } else {
+      getSecondNumber(one);
+    }
+    
   });
   document.getElementById("two").addEventListener("click", function (e) {
     Number((displayElement.innerText += two));
+    if (firstNumber === null) {
+      getFirstNumber(two);
+    } else {
+      getSecondNumber(two);
+    }
   });
   document.getElementById("three").addEventListener("click", function (e) {
     Number((displayElement.innerText += three));
+    if (firstNumber === null) {
+      getFirstNumber(three);
+    } else {
+      getSecondNumber(three);
+    }
   });
   document.getElementById("four").addEventListener("click", function (e) {
     Number((displayElement.innerText += four));
+    if (firstNumber === null) {
+      getFirstNumber(four);
+    } else {
+      getSecondNumber(four);
+    }
   });
   document.getElementById("five").addEventListener("click", function (e) {
     Number((displayElement.innerText += five));
+    if (firstNumber === null) {
+      getFirstNumber(five);
+    } else {
+      getSecondNumber(five);
+    }
   });
   document.getElementById("six").addEventListener("click", function (e) {
     Number((displayElement.innerText += six));
+    if (firstNumber === null) {
+      getFirstNumber(six);
+    } else {
+      getSecondNumber(six);
+    }
   });
   document.getElementById("seven").addEventListener("click", function (e) {
     Number((displayElement.innerText += seven));
+    if (firstNumber === null) {
+      getFirstNumber(seven);
+    } else {
+      getSecondNumber(seven);
+    }
+  
   });
   document.getElementById("eight").addEventListener("click", function (e) {
     Number((displayElement.innerText += eight));
+    if (firstNumber === null) {
+      getFirstNumber(eight);
+    } else {
+      getSecondNumber(eight);
+    }
+  
   });
   document.getElementById("nine").addEventListener("click", function (e) {
     Number((displayElement.innerText += nine));
+    if (firstNumber === null) {
+      getFirstNumber(nine);
+    } else {
+      getSecondNumber(nine);
+    }
   });
   document.getElementById("zero").addEventListener("click", function (e) {
     Number((displayElement.innerText += zero));
+    if (firstNumber === null) {
+      getFirstNumber(zero);
+    } else {
+      getSecondNumber(zero);
+    }
   });
   document.getElementById("addition").addEventListener("click", function (e) {
-    addition(); 
-    // operator1 = displayElement.innerText.substr(0);
-    // console.log(operator1)
-    // displayElement.innerText = " ";
-    // operator2 = displayElement.innerText.substr(0);
-    // console.log(operator2);
-    // displayElement.innerText = operator1 + operator2;
-
-// displayElement.innerText += "+";
+    operator = '+';
+    displayElement.innerText = "";
   });
+
+  
   document.getElementById("subtract").addEventListener("click", function (e) {
-    displayElement.innerText += "-";
+    operator = '-';
+    displayElement.innerText = "";
   });
   document.getElementById("multiply").addEventListener("click", function (e) {
-    displayElement.innerText += "*";
+    operator = '*';
+    displayElement.innerText = "";
   });
   document.getElementById("point").addEventListener("click", function (e) {
     displayElement.innerText += ".";
@@ -53,8 +104,10 @@ document.getElementById("one").addEventListener("click", function (e) {
     equals();
   });
   document.getElementById("divide").addEventListener("click", function (e) {
-    displayElement.innerText += "/";
+    operator = '/';
+    displayElement.innerText = "";
   });
+
   document.getElementById("del").addEventListener("click", function (e) {
     del();
   });

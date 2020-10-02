@@ -12,14 +12,6 @@
 // 4.) Click on the equals button
 // EXPECTATION: Show 3 in the display
 // ACTUAL: ???
-
-let firstNumber = null;
-let secondNumber = null;
-let operator = null;
-
-
-let displayElement = document.getElementById("display");
-
 const one = Number(1);
 const two = Number(2);
 const three = Number(3);
@@ -31,47 +23,60 @@ const eight = Number(8);
 const nine = Number(9);
 const zero = Number(0);
 
+let firstNumber = null;
+let secondNumber = null;
+let operator = null;
+
+
+let displayElement = document.getElementById("display");
+
+
 
 function getFirstNumber(number) {
-  firstNumber = Number(displayElement.innerText.substr(0));
-firstNumber === null ? firstNumber = number : firstNumber += number;
+  firstNumber === null ? firstNumber = number : firstNumber += number;
 return firstNumber;
 }
 
 function getSecondNumber(number) {
-  SecondNumber = Number(displayElement.innerText.substr(0));
-secondNumber === null ? secondNumber = number : secondNumber += number;
+  secondNumber === null ? secondNumber = number : secondNumber += number;
 return secondNumber;
 }
 
-console.log(firstNumber);
 
-function addition(number) {
-  getFirstNumber(number);
-  firstNumber = displayElement.innerHTML;
-  if (operator == null && displayElement.innerHTML >= 0 ) {
-getSecondNumber();
-  }
+function addition() {
+  if (operator == '+') {
+    answer = firstNumber + secondNumber;
+    }
+    displayElement.innerText = answer;
 }
 
 
-function subtraction(num1, num2) {
-  subtraction = num1 - num2;
-  return (displayElement.innerHTML = subtraction);
+function subtraction() {
+  if (operator == '-') {
+    answer = firstNumber - secondNumber;
+    }
+    displayElement.innerText = answer;
 }
 
-function division(num1, num2) {
-  division = num1 / num2;
-  return (displayElement.innerHTML = division);
+function division() {
+  if (operator == '/') {
+    answer = firstNumber / secondNumber;
+    }
+    displayElement.innerText = answer;
 }
 
-function multiplication(num1, num2) {
-  multiplication = num1 * num2;
-  return (displayElement.innerHTML = multiplication);
+function multiplication() {
+  if (operator == '*') {
+    answer = firstNumber * secondNumber;
+    }
+    displayElement.innerText = answer;
 }
 
 function allClear() {
   displayElement.innerHTML = "";
+  firstNumber = null;
+secondNumber = null;
+operator = null;
 }
 
 function del() {
@@ -79,15 +84,18 @@ function del() {
   return (displayElement.innerText = removeNumber);
 }
 
-function equals(operator1, operator2) {
-  operator2 = Number(displayElement.innerText.substr(0));
-  sum = Number(operator1) + Number(operator2)
-  console.log(operator1);
-  console.log(operator2);
-  console.log(sum);
-  displayElement.innerText = sum;
-return sum;
-  //Evaluate expression and submit to display. 
+function equals() {
+  if (operator == '+'){
+    addition();
+  } else if (operator == '-') {
+    subtraction();
+  } else if (operator == '/') {
+    division();
+  } else {
+    multiplication();
+  }
+  
+return answer;
 }
 
 
