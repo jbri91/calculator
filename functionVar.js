@@ -94,8 +94,6 @@ function equals() {
   } else {
     multiplication();
   }
-  
-return answer;
 }
 
 
