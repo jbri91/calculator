@@ -6,7 +6,6 @@ document.getElementById("one").addEventListener("click", function (e) {
     } else {
       getSecondNumber(one);
     }
-    
   });
   document.getElementById("two").addEventListener("click", function (e) {
     Number((displayElement.innerText += two));
@@ -82,30 +81,53 @@ document.getElementById("one").addEventListener("click", function (e) {
       getSecondNumber(zero);
     }
   });
+
   document.getElementById("addition").addEventListener("click", function (e) {
     operator = '+';
     displayElement.innerText = "";
+    if (firstNumber) {
+      firstNumber = firstNumber + secondNumber.toString();
+       firstNumber = parseInt(firstNumber);
+    }
+    secondNumber = null;
   });
 
   
   document.getElementById("subtract").addEventListener("click", function (e) {
     operator = '-';
     displayElement.innerText = "";
+    if (firstNumber) {
+      firstNumber = firstNumber + secondNumber.toString();
+       firstNumber = parseInt(firstNumber);
+    }
+    secondNumber = null;
   });
   document.getElementById("multiply").addEventListener("click", function (e) {
     operator = '*';
     displayElement.innerText = "";
+    if (firstNumber) {
+      firstNumber = firstNumber + secondNumber.toString();
+       firstNumber = parseInt(firstNumber);
+    }
+    secondNumber = null;
   });
   document.getElementById("point").addEventListener("click", function (e) {
     displayElement.innerText += ".";
   });
   document.getElementById("equal").addEventListener("click", function (e) {
-    // displayElement.innerText += "=";
+   if (firstNumber) {
+
+   }
     equals();
   });
   document.getElementById("divide").addEventListener("click", function (e) {
     operator = '/';
     displayElement.innerText = "";
+    if (firstNumber) {
+      firstNumber = firstNumber + secondNumber.toString();
+       firstNumber = parseInt(firstNumber);
+    }
+    secondNumber = null;
   });
 
   document.getElementById("del").addEventListener("click", function (e) {

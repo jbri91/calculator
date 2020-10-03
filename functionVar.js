@@ -33,19 +33,19 @@ let displayElement = document.getElementById("display");
 
 
 function getFirstNumber(number) {
-  firstNumber === null ? firstNumber = number : firstNumber += number;
+  firstNumber === null ? firstNumber = number : firstNumber += number.toString();
 return firstNumber;
 }
 
 function getSecondNumber(number) {
-  secondNumber === null ? secondNumber = number : secondNumber += number;
+  secondNumber === null ? secondNumber = number : secondNumber += number.toString();
 return secondNumber;
 }
 
 
-function addition() {
+function addition() { 
   if (operator == '+') {
-    answer = firstNumber + secondNumber;
+    answer = firstNumber + parseInt(secondNumber);
     }
     displayElement.innerText = answer;
 }
@@ -53,7 +53,7 @@ function addition() {
 
 function subtraction() {
   if (operator == '-') {
-    answer = firstNumber - secondNumber;
+    answer = firstNumber - parseInt(secondNumber);
     }
     displayElement.innerText = answer;
 }
