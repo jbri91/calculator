@@ -110,15 +110,13 @@ document.getElementById("multiply").addEventListener("click", function (e) {
 });
 document.getElementById("point").addEventListener("click", function (e) {
   displayElement.innerText += '.';
-  if (firstNumber) {
-    firstNumber = firstNumber.toString() + secondNumber.toString();
-    firstNumber = parseInt(firstNumber);
-  }
-  secondNumber = null;
+  // if (firstNumber) {
+  //   firstNumber = firstNumber.toString() + secondNumber.toString();
+  //   firstNumber = parseInt(firstNumber);
+  // }
+  // secondNumber = null;
 });
 document.getElementById("equal").addEventListener("click", function (e) {
-  if (firstNumber) {
-  }
   equals();
 });
 document.getElementById("divide").addEventListener("click", function (e) {

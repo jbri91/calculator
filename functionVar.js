@@ -39,7 +39,7 @@ return firstNumber;
 
 function getSecondNumber(number) {
   secondNumber === null ? secondNumber = number : secondNumber += number.toString();
-return secondNumber;
+  return secondNumber;
 }
 
 
@@ -94,11 +94,9 @@ function equals() {
   } else {
     multiplication();
   }
-
-  if (displayElement.innerText = 'Infinity') {
-    displayElement.innerText = 'Cannot Divide By Zero'
+  if(displayElement.innerText == 'Infinity' || displayElement.innerText == 'NaN' ) {
+    displayElement.innerText = 'Can Not Divide By Zero'
   }
-
 }
 
 
