@@ -82,7 +82,7 @@ document.getElementById("zero").addEventListener("click", function (e) {
 
 document.getElementById("addition").addEventListener("click", function (e) {
   operator = "+";
-  displayElement.innerText = "";
+  displayElement.innerText = "" ;
   if (firstNumber) {
     firstNumber = firstNumber + secondNumber.toString();
     firstNumber = parseInt(firstNumber);
@@ -109,13 +109,14 @@ document.getElementById("multiply").addEventListener("click", function (e) {
   secondNumber = null;
 });
 document.getElementById("point").addEventListener("click", function (e) {
-  displayElement.innerText += '.';
+  Number(displayElement.innerText += '.');
   // if (firstNumber) {
   //   firstNumber = firstNumber.toString() + secondNumber.toString();
   //   firstNumber = parseInt(firstNumber);
   // }
   // secondNumber = null;
 });
+
 document.getElementById("equal").addEventListener("click", function (e) {
   equals();
 });
