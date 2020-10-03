@@ -94,6 +94,11 @@ function equals() {
   } else {
     multiplication();
   }
+
+  if (displayElement.innerText = 'Infinity') {
+    displayElement.innerText = 'Cannot Divide By Zero'
+  }
+
 }
 
 
