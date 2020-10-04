@@ -31,21 +31,22 @@ let operator = null;
 let displayElement = document.getElementById("display");
 
 
-
 function getFirstNumber(number) {
-  firstNumber === null ? firstNumber = number : firstNumber += number.toString();
+  firstNumber == null || operator == null? firstNumber = number : firstNumber += number;
+
 return firstNumber;
 }
 
 function getSecondNumber(number) {
-  secondNumber === null ? secondNumber = number : secondNumber += number.toString();
+  secondNumber == null || operator !== null ? secondNumber = number : secondNumber += number;
+
   return secondNumber;
 }
 
 
 function addition() { 
   if (operator == '+') {
-    answer = firstNumber + parseInt(secondNumber);
+    answer = parseInt(firstNumber) + parseInt(secondNumber);
     }
     displayElement.innerText = answer;
 }
@@ -53,7 +54,7 @@ function addition() {
 
 function subtraction() {
   if (operator == '-') {
-    answer = firstNumber - parseInt(secondNumber);
+    answer = parseInt(firstNumber) - parseInt(secondNumber);
     }
     displayElement.innerText = answer;
 }
