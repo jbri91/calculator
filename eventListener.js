@@ -105,6 +105,7 @@ document.getElementById("zero").addEventListener("click", function (e) {
 document.getElementById("addition").addEventListener("click", function (e) {
   operator = "+";
   displayElement.innerText = "";
+  sum = parseInt(secondNumber) + parseInt(firstNumber); 
 });
 
 document.getElementById("subtract").addEventListener("click", function (e) {

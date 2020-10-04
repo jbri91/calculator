@@ -1,17 +1,3 @@
-// TEST CASE
-// Description: Adding 1 + 2 = 3
-// 1.) Click on the number one button
-// EXPECTATION: Show 1 in the display
-// ACTUAL: ???
-// 2.) Click on the plus button
-// EXPECTATION: Nothing. (Still showing 1 in the display)
-// ACTUAL: ???
-// 3.) Click on the number two button
-// EXPECTATION: Show 2 in the display
-// ACTUAL: ???
-// 4.) Click on the equals button
-// EXPECTATION: Show 3 in the display
-// ACTUAL: ???
 const one = Number(1);
 const two = Number(2);
 const three = Number(3);
@@ -48,7 +34,7 @@ function addition() {
   if (operator == '+') {
     answer = parseInt(firstNumber) + parseInt(secondNumber);
     }
-    displayElement.innerText = answer;
+    displayElement.innerText = answer; 
 }
 
 
