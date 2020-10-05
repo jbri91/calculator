@@ -1,4 +1,5 @@
 document.getElementById("one").addEventListener("click", function (e) {
+  displayElement.innerText = ""
   displayElement.innerText += one;
 
   if (operator === null) {
@@ -105,7 +106,17 @@ document.getElementById("zero").addEventListener("click", function (e) {
 document.getElementById("addition").addEventListener("click", function (e) {
   operator = "+";
   displayElement.innerText = "";
-  sum = parseInt(secondNumber) + parseInt(firstNumber); 
+  sum = parseInt(secondNumber) + parseInt(firstNumber);
+
+  if (firstNumber && secondNumber) {
+    // sum = parseInt(secondNumber) + parseInt(firstNumber);
+    displayElement.innerText = sum;
+    parseInt(getFirstNumber(displayElement.innerText))
+    // getSecondNumber(displayElement.innerText)
+    sum += firstNumber;
+    
+  }
+
 });
 
 document.getElementById("subtract").addEventListener("click", function (e) {
