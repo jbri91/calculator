@@ -118,8 +118,9 @@ document.getElementById("addition").addEventListener("click", function (e) {
   
   if (firstNumber && secondNumber && operator) {
     firstNumber = parseInt(firstNumber) + parseInt(secondNumber);
-    displayElement.innerText += firstNumber;  
+    displayElement.innerText = firstNumber; 
   }
+
 });
 
 document.getElementById("subtract").addEventListener("click", function (e) {
