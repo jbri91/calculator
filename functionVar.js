@@ -19,7 +19,6 @@ let displayElement = document.getElementById("display");
 
 function getFirstNumber(number) {
   firstNumber == null || operator == null? firstNumber = number : firstNumber += number;
-
 return firstNumber;
 }
 
