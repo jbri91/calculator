@@ -1,155 +1,154 @@
 document.getElementById("one").addEventListener("click", function (e) {
-  // displayElement.innerText = "";
-  displayElement.innerText += one;
-
   if (operator === null) {
-    getFirstNumber(displayElement.innerText);
+    getFirstNumber(one);
+    displayElement.innerText = firstNumber;
   }
-
   if (operator != null) {
-    getSecondNumber(displayElement.innerText);
+    getSecondNumber(one);
+    displayElement.innerText = secondNumber;
   }
 });
 
 document.getElementById("two").addEventListener("click", function (e) {
-  // displayElement.innerText = ""
-  displayElement.innerText += two;
   if (operator === null) {
-    getFirstNumber(displayElement.innerText);
+    getFirstNumber(two);
+    displayElement.innerText = firstNumber;
   }
-
   if (operator != null) {
-    getSecondNumber(displayElement.innerText);
+    getSecondNumber(two);
+    displayElement.innerText = secondNumber;
   }
 });
-document.getElementById("three").addEventListener("click", function (e) {
-  // displayElement.innerText = ""
-  displayElement.innerText += three;
-  if (operator === null) {
-    getFirstNumber(displayElement.innerText);
-  }
 
+document.getElementById("three").addEventListener("click", function (e) {
+  if (operator === null) {
+    getFirstNumber(three);
+    displayElement.innerText = firstNumber;
+  }
   if (operator != null) {
-    getSecondNumber(displayElement.innerText);
+    getSecondNumber(three);
+    displayElement.innerText = secondNumber;
   }
 });
 
 document.getElementById("four").addEventListener("click", function (e) {
-  // displayElement.innerText = ""
-  displayElement.innerText += four;
   if (operator === null) {
-    getFirstNumber(displayElement.innerText);
+    getFirstNumber(four);
+    displayElement.innerText = firstNumber;
   }
-
   if (operator != null) {
-    getSecondNumber(displayElement.innerText);
+    getSecondNumber(four);
+    displayElement.innerText = secondNumber;
   }
 });
 document.getElementById("five").addEventListener("click", function (e) {
-  // displayElement.innerText = ""
-  displayElement.innerText += five
   if (operator === null) {
-    getFirstNumber(displayElement.innerText);
+    getFirstNumber(five);
+    displayElement.innerText = firstNumber;
   }
-
   if (operator != null) {
-    getSecondNumber(displayElement.innerText);
+    getSecondNumber(five);
+    displayElement.innerText = secondNumber;
   }
 });
 document.getElementById("six").addEventListener("click", function (e) {
-  // displayElement.innerText = ""
-  displayElement.innerText += six;
   if (operator === null) {
-    getFirstNumber(displayElement.innerText);
+    getFirstNumber(six);
+    displayElement.innerText = firstNumber;
   }
-
   if (operator != null) {
-    getSecondNumber(displayElement.innerText);
+    getSecondNumber(six);
+    displayElement.innerText = secondNumber;
   }
 });
 document.getElementById("seven").addEventListener("click", function (e) {
-  // displayElement.innerText = ""
-  displayElement.innerText += seven;
   if (operator === null) {
-    getFirstNumber(displayElement.innerText);
+    getFirstNumber(seven);
+    displayElement.innerText = firstNumber;
   }
-
   if (operator != null) {
-    getSecondNumber(displayElement.innerText);
+    getSecondNumber(seven);
+    displayElement.innerText = secondNumber;
   }
 });
 document.getElementById("eight").addEventListener("click", function (e) {
-  // displayElement.innerText = ""
-  displayElement.innerText += eight;
   if (operator === null) {
-    getFirstNumber(displayElement.innerText);
+    getFirstNumber(eight);
+    displayElement.innerText = firstNumber;
   }
-
   if (operator != null) {
-    getSecondNumber(displayElement.innerText);
+    getSecondNumber(eight);
+    displayElement.innerText = secondNumber;
   }
 });
+
 document.getElementById("nine").addEventListener("click", function (e) {
-  // displayElement.innerText = ""
-  displayElement.innerText += nine;
   if (operator === null) {
-    getFirstNumber(displayElement.innerText);
+    getFirstNumber(nine);
+    displayElement.innerText = firstNumber;
   }
-
   if (operator != null) {
-    getSecondNumber(displayElement.innerText);
+    getSecondNumber(nine);
+    displayElement.innerText = secondNumber;
   }
 });
-document.getElementById("zero").addEventListener("click", function (e) {
-  // displayElement.innerText = ""
-  displayElement.innerText += zero;
-  if (operator === null) {
-    getFirstNumber(displayElement.innerText);
-  }
 
+document.getElementById("zero").addEventListener("click", function (e) {
+  if (operator === null) {
+    getFirstNumber(zero);
+    displayElement.innerText = firstNumber;
+  }
   if (operator != null) {
-    getSecondNumber(displayElement.innerText);
+    getSecondNumber(zero);
+    displayElement.innerText = secondNumber;
   }
 });
 
 document.getElementById("addition").addEventListener("click", function (e) {
-  operator = "+";
   displayElement.innerText = "";
-  
+
   if (firstNumber && secondNumber && operator) {
     firstNumber = parseInt(firstNumber) + parseInt(secondNumber);
-    displayElement.innerText = firstNumber; 
+    secondNumber = null;
+    displayElement.innerText = firstNumber;
   }
-
+  operator = "+";
 });
 
 document.getElementById("subtract").addEventListener("click", function (e) {
-  operator = "-";
   displayElement.innerText = "";
+
   if (firstNumber && secondNumber && operator) {
     firstNumber = parseInt(firstNumber) - parseInt(secondNumber);
+    secondNumber = null;
     displayElement.innerText = firstNumber;
-    }
-
+  }
+  operator = "-";
 });
+
 document.getElementById("multiply").addEventListener("click", function (e) {
-  operator = "*";
   displayElement.innerText = "";
+
   if (firstNumber && secondNumber && operator) {
     firstNumber = parseInt(firstNumber) * parseInt(secondNumber);
+    secondNumber = null;
     displayElement.innerText = firstNumber;
-    }
+  }
+  operator = "*";
 });
-document.getElementById("point").addEventListener("click", function (e) {
-  Number((displayElement.innerText += "."));
- 
-  if (operator === null) {
-    getFirstNumber(displayElement.innerText);
-  }
 
-  if (operator != null) {
-    getSecondNumber(displayElement.innerText);
-  }
+document.getElementById("point").addEventListener("click", function (e) {
+  // Number((displayElement.innerText += "."));
+
+  if (operator === null) {
+    getFirstNumber('.');
+   displayElement.innerText = firstNumber;
+ } 
+ if (operator != null) {
+   getSecondNumber('.');
+   displayElement.innerText = secondNumber; 
+} 
+
 });
 
 document.getElementById("equal").addEventListener("click", function (e) {
@@ -157,12 +156,13 @@ document.getElementById("equal").addEventListener("click", function (e) {
 });
 
 document.getElementById("divide").addEventListener("click", function (e) {
-  operator = "/";
   displayElement.innerText = "";
   if (firstNumber && secondNumber && operator) {
     firstNumber = parseInt(firstNumber) - parseInt(secondNumber);
+    secondNumber = null;
     displayElement.innerText = firstNumber;
-    }
+  }
+  operator = "/";
 });
 
 document.getElementById("del").addEventListener("click", function (e) {
