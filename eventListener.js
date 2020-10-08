@@ -1,11 +1,11 @@
 document.getElementById("one").addEventListener("click", function (e) {
   if (operator === null) {
     getFirstNumber(one);
-    displayElement.innerText = firstNumber;
+    displayElement.innerText += firstNumber;
   }
   if (operator != null) {
     getSecondNumber(one);
-    displayElement.innerText = secondNumber; 
+    displayElement.innerText += secondNumber; 
   }
 });
 
