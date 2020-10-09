@@ -7,9 +7,12 @@ Click [here](https://https://jbri91.github.io/calculator/) to try out the calcul
 ![Simple Calculator](/calculator.png)
 
 # Summary
-I enjoyed this project. When I first looked at it, it was a bit intimidating. I broke it down into parts and focused on each of them individually. That made it a lot easier to put together. It was interesting to work with a table this time around but as I learn more I realize the principles carry over very well. For example, adding or removing a parent element or using the id's, class names or tag names in order to manipulate the DOM. That helped me get a better understanding of those as well as how they work especially dealing with parent and child elements. 
 
-The more challenging areas were getting the delete button to delete the item I chose to delete. Initially, the first row was the one that would delete no matter which delete button I pressed. That is when understanding the parent elements came into play. That allowed me to program the delete button to delete its parent. It made perfect sense afterwards. Another challenge was getting the submit button to link with all the input boxes in order to add data to the table.
+The calculator tied a lot of the things I have been learning from past projects together. One thing that stood out when I first started this project was to break down the calculator into different pieces. For each piece, I created a function so that it had one job. That made the project go a lot smoother. 
+
+The most challenging piece was when I got to the part of trying to understand how to go about conducting the operations. The way around that was when I was advised by my mentors to just focus on the end result with hard coded variables at first. In this case, it was the equal sign. Once I got the equal sign to work the way I needed it to, I was able to work backwards from there and remove the 'training wheels' and code in the user's input versus hard coded variables.
+
+With this project, I got the chance to practice more using conditional statements to control what happens in different scenarios throughout the user's experience. Despite some of the challenges, I thought it was a fun project. 
 
 
 
