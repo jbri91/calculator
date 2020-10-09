@@ -182,7 +182,7 @@ document.getElementById("addition").addEventListener("click", function (e) {
   displayElement.innerText = "+";
 
   if (firstNumber && secondNumber && operator) {
-    firstNumber = parseInt(firstNumber) + parseInt(secondNumber);
+    firstNumber = parseFloat(firstNumber) + parseFloat(secondNumber);
     secondNumber = null;
     displayElement.innerText = firstNumber;
   }
@@ -221,7 +221,7 @@ document.getElementById("divide").addEventListener("click", function (e) {
 document.getElementById("point").addEventListener("click", function (e) {
 
   if (operator === null) {
-    getFirstNumber('.');
+    getFirstNumber(point);
     displayElement.innerText += firstNumber;
     firstNumber = displayElement.innerText;
   }
@@ -231,7 +231,7 @@ document.getElementById("point").addEventListener("click", function (e) {
   }
 
   if (operator != null) {
-    getSecondNumber('.');
+    getSecondNumber(point);
     displayElement.innerText += secondNumber;
     secondNumber = displayElement.innerText; 
   }

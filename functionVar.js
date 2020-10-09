@@ -8,6 +8,7 @@ const seven = Number(7);
 const eight = Number(8);
 const nine = Number(9);
 const zero = Number(0);
+const point = '.';
 
 let firstNumber = null;
 let secondNumber = null;
@@ -29,12 +30,13 @@ function getSecondNumber(number) {
 
 
 function addition() { 
+
   if (operator == '+') {
-    answer = parseInt(firstNumber) + parseInt(secondNumber);
+    answer = parseFloat(firstNumber) + parseFloat(secondNumber);
     }
     displayElement.innerText = answer; 
-}
 
+  }
 
 function subtraction() {
   if (operator == '-') {
@@ -65,8 +67,19 @@ operator = null;
 }
 
 function del() {
-  removeNumber = displayElement.innerText.slice(0, -1);
-  return (displayElement.innerText = removeNumber);
+
+  if (firstNumber && operator == null && secondNumber == null) {
+    removeNumber = firstNumber.replace(firstNumber, null)
+    firstNumber = removeNumber;
+    displayElement.innerText = ''
+  }
+
+  if (firstNumber && secondNumber && operator != null) {
+    removeNumber = secondNumber.replace(secondNumber, null)
+    secondNumber = removeNumber;
+    displayElement.innerText = ''
+  }
+  
 }
 
 function equals() {
