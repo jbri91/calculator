@@ -2,110 +2,184 @@ document.getElementById("one").addEventListener("click", function (e) {
   if (operator === null) {
     getFirstNumber(one);
     displayElement.innerText += firstNumber;
+    firstNumber = displayElement.innerText;
   }
+
+if (operator != null && firstNumber != null &&  secondNumber == null) {
+  displayElement.innerText = secondNumber;
+
+}
   if (operator != null) {
     getSecondNumber(one);
-    displayElement.innerText += secondNumber; 
+    displayElement.innerText += secondNumber;
+    secondNumber = displayElement.innerText; 
   }
 });
 
 document.getElementById("two").addEventListener("click", function (e) {
   if (operator === null) {
     getFirstNumber(two);
-    displayElement.innerText = firstNumber;
+    displayElement.innerText += firstNumber;
+    firstNumber = displayElement.innerText;
   }
+
+  if (operator != null && firstNumber != null && secondNumber == null) {
+    displayElement.innerText = secondNumber;
+  }
+
+
   if (operator != null) {
     getSecondNumber(two);
-    displayElement.innerText = secondNumber; 
+    displayElement.innerText += secondNumber;
+    secondNumber = displayElement.innerText; 
   }
 });
 
 document.getElementById("three").addEventListener("click", function (e) {
   if (operator === null) {
     getFirstNumber(three);
-    displayElement.innerText = firstNumber;
+    displayElement.innerText += firstNumber;
+    firstNumber = displayElement.innerText;
   }
+
+  if (operator != null && firstNumber != null && secondNumber == null) {
+    displayElement.innerText = secondNumber;
+  }
+
   if (operator != null) {
     getSecondNumber(three);
-    displayElement.innerText = secondNumber; 
+    displayElement.innerText += secondNumber;
+    secondNumber = displayElement.innerText; 
+
   }
 });
 
 document.getElementById("four").addEventListener("click", function (e) {
   if (operator === null) {
     getFirstNumber(four);
-    displayElement.innerText = firstNumber;
+    displayElement.innerText += firstNumber;
+    firstNumber = displayElement.innerText;
   }
+
+  if (operator != null && firstNumber != null && secondNumber == null) {
+    displayElement.innerText = secondNumber;
+  }
+
   if (operator != null) {
     getSecondNumber(four);
-    displayElement.innerText = secondNumber; 
+    displayElement.innerText += secondNumber;
+    secondNumber = displayElement.innerText; 
   }
-});
+})
+
 document.getElementById("five").addEventListener("click", function (e) {
   if (operator === null) {
     getFirstNumber(five);
-    displayElement.innerText = firstNumber;
+    displayElement.innerText += firstNumber;
+    firstNumber = displayElement.innerText;
   }
+
+  if (operator != null && firstNumber != null && secondNumber == null) {
+    displayElement.innerText = secondNumber;
+  }
+
   if (operator != null) {
     getSecondNumber(five);
-    displayElement.innerText = secondNumber; 
+    displayElement.innerText += secondNumber;
+    secondNumber = displayElement.innerText; 
   }
 });
 document.getElementById("six").addEventListener("click", function (e) {
   if (operator === null) {
     getFirstNumber(six);
-    displayElement.innerText = firstNumber;
+    displayElement.innerText += firstNumber;
+  firstNumber = displayElement.innerText;
   }
+
+  if (operator != null && firstNumber != null && secondNumber == null) {
+    displayElement.innerText = secondNumber;
+  }
+
   if (operator != null) {
     getSecondNumber(six);
-    displayElement.innerText = secondNumber; 
+    displayElement.innerText += secondNumber;
+    secondNumber = displayElement.innerText; 
   }
 });
 document.getElementById("seven").addEventListener("click", function (e) {
   if (operator === null) {
     getFirstNumber(seven);
-    displayElement.innerText = firstNumber;
+    displayElement.innerText += firstNumber;
+    firstNumber = displayElement.innerText;
   }
+
+  if (operator != null && firstNumber != null && secondNumber == null) {
+    displayElement.innerText = secondNumber;
+  }
+
   if (operator != null) {
     getSecondNumber(seven);
-    displayElement.innerText = secondNumber; 
+    displayElement.innerText += secondNumber;
+    secondNumber = displayElement.innerText; 
   }
 });
 document.getElementById("eight").addEventListener("click", function (e) {
   if (operator === null) {
     getFirstNumber(eight);
-    displayElement.innerText = firstNumber;
+    displayElement.innerText += firstNumber;
+    firstNumber = displayElement.innerText;
   }
+
+  if (operator != null && firstNumber != null && secondNumber == null) {
+    displayElement.innerText = secondNumber;
+  }
+
   if (operator != null) {
     getSecondNumber(eight);
-    displayElement.innerText = secondNumber; 
+    displayElement.innerText += secondNumber;
+    secondNumber = displayElement.innerText; 
   }
 });
 
 document.getElementById("nine").addEventListener("click", function (e) {
   if (operator === null) {
     getFirstNumber(nine);
-    displayElement.innerText = firstNumber;
+    displayElement.innerText += firstNumber;
+    firstNumber = displayElement.innerText;
   }
+
+  if (operator != null && firstNumber != null && secondNumber == null) {
+    displayElement.innerText = secondNumber;
+  }
+
   if (operator != null) {
     getSecondNumber(nine);
-    displayElement.innerText = secondNumber; 
+    displayElement.innerText += secondNumber;
+    secondNumber = displayElement.innerText; 
   }
 });
 
 document.getElementById("zero").addEventListener("click", function (e) {
   if (operator === null) {
     getFirstNumber(zero);
-    displayElement.innerText = firstNumber;
+    displayElement.innerText += firstNumber;
+    firstNumber = displayElement.innerText;
   }
+
+  if (operator != null && firstNumber != null && secondNumber == null) {
+    displayElement.innerText = secondNumber;
+  }
+
   if (operator != null) {
     getSecondNumber(zero);
-    displayElement.innerText = secondNumber; 
+    displayElement.innerText += secondNumber; 
+    secondNumber = displayElement.innerText;
+  
   }
 });
 
 document.getElementById("addition").addEventListener("click", function (e) {
-  displayElement.innerText = "";
+  displayElement.innerText = "+";
 
   if (firstNumber && secondNumber && operator) {
     firstNumber = parseInt(firstNumber) + parseInt(secondNumber);
@@ -115,7 +189,7 @@ document.getElementById("addition").addEventListener("click", function (e) {
   operator = "+";
 });
 document.getElementById("subtract").addEventListener("click", function (e) {
-  displayElement.innerText = "";
+  displayElement.innerText = "-";
 
   if (firstNumber && secondNumber && operator) {
     firstNumber = parseInt(firstNumber) - parseInt(secondNumber);
@@ -125,7 +199,7 @@ document.getElementById("subtract").addEventListener("click", function (e) {
   operator = "-";
 });
 document.getElementById("multiply").addEventListener("click", function (e) {
-  displayElement.innerText = "";
+  displayElement.innerText = "X";
 
   if (firstNumber && secondNumber && operator) {
     firstNumber = parseInt(firstNumber) * parseInt(secondNumber);
@@ -135,7 +209,7 @@ document.getElementById("multiply").addEventListener("click", function (e) {
   operator = "*";
 });
 document.getElementById("divide").addEventListener("click", function (e) {
-  displayElement.innerText = "";
+  displayElement.innerText = "/";
   if (firstNumber && secondNumber && operator) {
     firstNumber = parseInt(firstNumber) - parseInt(secondNumber);
     secondNumber = null;
@@ -148,11 +222,18 @@ document.getElementById("point").addEventListener("click", function (e) {
 
   if (operator === null) {
     getFirstNumber('.');
-    displayElement.innerText = firstNumber;
+    displayElement.innerText += firstNumber;
+    firstNumber = displayElement.innerText;
   }
+
+  if (operator != null && firstNumber != null && secondNumber == null) {
+    displayElement.innerText = secondNumber;
+  }
+
   if (operator != null) {
     getSecondNumber('.');
-    displayElement.innerText = secondNumber; 
+    displayElement.innerText += secondNumber;
+    secondNumber = displayElement.innerText; 
   }
 });
 document.getElementById("equal").addEventListener("click", function (e) {
