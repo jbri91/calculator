@@ -79,6 +79,12 @@ function del() {
     secondNumber = removeNumber;
     displayElement.innerText = ''
   }
+
+  if (firstNumber && operator && secondNumber == null) {
+    removeOperator = operator.replace(operator, null)
+    operator = removeOperator;
+    displayElement.innerText = ''
+  }
   
 }
 
