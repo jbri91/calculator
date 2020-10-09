@@ -4,7 +4,7 @@ Simple Calculator created with HTML, CSS and JavaScript
 
 Click [here](https://https://jbri91.github.io/calculator/) to try out the calculator!
 
-![Simple Calculator](/calculator.png)
+![Simple Calculator](/calculator_image.png)
 
 # Summary
 
